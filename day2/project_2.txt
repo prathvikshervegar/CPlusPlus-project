@@ -1,0 +1,31 @@
+day 2:
+Save work of day1 in github.
+
+model remains same
+view : add more views
+- get cube
+- get # of bits
+- get sum of digits
+
+controller:
+- change it to allow registering multiple views
+- change update to update only those views which are registered
+- provide a machanism deregister a view.
+- hint: controller has to have collection of views.
+
+process:
+create the header files. each view should be in different files.
+so, you will have 3 base class header files, 1 controller header file,
+1 model header file, 4 view header files.
+
+Share with your "next team". Let them create test cases.
+you create test cases for your "previous" team".
+Implement the solution.
+share for testing.
+Fix your code if required.
+share your code.
+review the code of your previous team.
+get the review from the next team.
+
+All the best.
+
