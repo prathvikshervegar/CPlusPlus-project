@@ -9,13 +9,13 @@ Controller::Controller(Model* ptr_m) : ptr_m_(ptr_m) { }
 
 void Controller::add(View* ptr_v)
 {
-	ptr_v1_[view_count++] = ptr_v;
+	ptr_v_[view_count++] = ptr_v;
 }
 
 void Controller::update() 
 {
 	for(int i=0; i<view_count; i++)
 	{
-		ptr_v1_[i]->update();
+		ptr_v_[i]->update();
 	}
 }

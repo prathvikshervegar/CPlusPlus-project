@@ -11,7 +11,7 @@ class Controller : public Controller_base
 
 	private:
 	Model* ptr_m_;
-	View *ptr_v1_[10];
+	View *ptr_v_[10];
 
 };
 
