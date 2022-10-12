@@ -1,0 +1,17 @@
+Task:
+- this program very badly written mimics Model View Controller model.
+Model stores data. Whenever changed, will inform the controller.
+Those views (which display something) register with the controller.
+When the model is modified, it will let the controller know.
+Controller in turn will ask the register views to update themselves.
+views will then fetch the data from the model and display the result.
+
+Your requirement.
+read and understand the code.
+draw a class diagram.
+express in English what each function is doing.
+Divide the program into 13 files.
+base classes header and implementation(3 + 3)
+derived classes header and implementation(3 + 3)
+client code.
+also write make file.
