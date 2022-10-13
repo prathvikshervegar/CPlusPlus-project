@@ -8,6 +8,7 @@ class View_cube : public View
 	virtual void update();
 	virtual void get_model(Model*);
 	virtual void register_view(Controller_base*);
+	virtual void deregister_view(Controller_base*);
 	private:
 	Model *ptr_model_;
 

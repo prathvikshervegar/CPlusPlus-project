@@ -30,3 +30,8 @@ void View_bits::register_view(Controller_base* ptr_c)
 {
 	ptr_c->add(this);
 };
+
+void View_bits::deregister_view(Controller_base* ptr_c)
+{
+	ptr_c->remove(this);
+};

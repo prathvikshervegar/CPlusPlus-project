@@ -8,6 +8,7 @@ class Controller : public Controller_base
 	Controller(Model*);
 	virtual void add(View*);
 	virtual void update();
+	virtual void remove(View*);
 
 	private:
 	Model* ptr_m_;

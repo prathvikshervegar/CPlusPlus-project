@@ -19,3 +19,8 @@ void View_cube::register_view(Controller_base* ptr_c)
 {
 	ptr_c->add(this);
 };
+
+void View_cube::deregister_view(Controller_base* ptr_c)
+{
+	ptr_c->remove(this);
+};

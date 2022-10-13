@@ -28,3 +28,8 @@ void View_digit_sum::register_view(Controller_base* ptr_c)
 {
 	ptr_c->add(this);
 };
+
+void View_digit_sum::deregister_view(Controller_base* ptr_c)
+{
+	ptr_c->remove(this);
+};
