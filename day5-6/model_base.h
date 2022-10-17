@@ -19,6 +19,8 @@ class DoublyLinkedList {
 	int last();
 	int count();
 	int sum();
+	int greatestKey();
+	int greatestDiff();
 	void insert_front(int newData);
 	void insert_end(int newData);
 	void deleteByValue(int val);

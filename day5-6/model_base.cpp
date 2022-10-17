@@ -61,6 +61,41 @@ int DoublyLinkedList::sum(){
 	return sum;
 }
 
+int DoublyLinkedList::greatestKey()
+{
+	if(head_ == NULL){
+		return -1;
+	}
+	Node* temp = head_;
+	Node* max = head_;
+	// traverse the whole doubly linked list
+	while (temp != NULL)
+	{
+		if (temp->data_ > max->data_)
+			max = temp;
+		temp = temp->next_;
+	}
+	return max->data_;
+}
+
+int DoublyLinkedList::greatestDiff()
+{
+	if(head_ == NULL){
+		return -1;
+	}
+	Node* temp = head_;
+	int diff = temp->data_;
+	// traverse the whole doubly linked list
+	while (temp->next_ != NULL)
+	{
+		int new_diff = abs(temp->next_->data_ - temp->data_);
+		if (new_diff > diff)
+			diff = new_diff;
+		temp = temp->next_;
+	}
+	return diff;
+}
+
 void DoublyLinkedList::insert_front(int newData) {
    	Node* newNode = new Node;
    	newNode->data_ = newData;

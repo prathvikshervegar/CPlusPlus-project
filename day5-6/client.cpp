@@ -6,6 +6,8 @@ using namespace std;
 #include "view_last.h"
 #include "view_count.h"
 #include "view_sum.h"
+#include "view_greatest_key.h"
+#include "view_greatest_diff.h"
 
 
 int main()
@@ -21,12 +23,16 @@ int main()
 	View_last view_last;
 	View_count view_count;
 	View_sum view_sum;
+	View_greatest_key view_greatest_key;
+	View_greatest_diff view_greatest_diff;
 
 	while (true)
 	{
 		cout << "\n1. Model operations\n\n2. Register First node view\n3. Register Last node view\n"
-			"4. Register Node count view\n5. Register Node sum view\n\n6. Deregister First node view\n"
-			"7. Deregister Last node view\n8. Deregister Node count view\n9. Deregister Node sum view\n\n"
+			"4. Register Node count view\n5. Register Node sum view\n6. Register Greatest Key view\n"
+			"7. Register Greatest Difference view\n\n8. Deregister First node view\n"
+			"9. Deregister Last node view\n10. Deregister Node count view\n11. Deregister Node sum view\n"
+			"12. Deregister Greatest Key view\n13. Deregister Greatest Difference view\n\n"
 			"Press 0 to EXIT\n\n";
 		cout << "\nChoose the option: ";
 		cin >> op;
@@ -85,17 +91,33 @@ int main()
 					view_sum.get_model(&m);
 					view_sum.update();
 					break;
-
-			case 6: view_first.deregister_view(&c);
+			
+			case 6: view_greatest_key.register_view(&c);
+					view_greatest_key.get_model(&m);
+					view_greatest_key.update();
 					break;
 
-			case 7: view_last.deregister_view(&c);
+			case 7: view_greatest_diff.register_view(&c);
+					view_greatest_diff.get_model(&m);
+					view_greatest_diff.update();
 					break;
 
-			case 8: view_count.deregister_view(&c);
+			case 8: view_first.deregister_view(&c);
 					break;
 
-			case 9: view_sum.deregister_view(&c);
+			case 9: view_last.deregister_view(&c);
+					break;
+
+			case 10: view_count.deregister_view(&c);
+					break;
+
+			case 11: view_sum.deregister_view(&c);
+					break;
+
+			case 12: view_greatest_key.deregister_view(&c);
+					break;
+
+			case 13: view_greatest_diff.deregister_view(&c);
 					break;
 		
 			default: cout << "Invalid choice\n";
