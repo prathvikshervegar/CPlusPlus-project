@@ -1,0 +1,20 @@
+store day2 on github and then start this effort.
+
+major change in the project.
+
+change the model:
+replace with a double linked list
+each node has an int field : key
+support operations:
+add at either end
+remove at either end
+
+change the views.
+- view_count : finds the # of nodes
+- view_sum : finds the total of all keys
+- view_first : display the first key 
+- view_last : display the last key
+
+The structure developed on day2 should remain the same.
+Follow the same procedure.
+

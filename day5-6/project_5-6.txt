@@ -1,0 +1,13 @@
+1. Add a couple of more views
+   - find the greatest key
+   - find the greatest difference between successive keys
+   Store the result in the view. Whenever a view
+   need be displayed, update the view only if the
+   model is changed.
+   Whenever the model changes, update a boolean
+   field in the view that the model has changed.
+   
+----------------------
+
+2. convert the linked list to a template class.
+   Test with : key being int, double, user defined complex class
