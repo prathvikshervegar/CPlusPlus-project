@@ -6,12 +6,16 @@ using namespace std;
 
 void View_greatest_diff::update()
 {
+	if(flag == 0){
+		cout << "View not registered\n\n";
+		return;
+	}
 	int x = ptr_model_->getList().greatestDiff();
 	if(x == -1){
 		cout << "List is empty.\n";
 		return;
 	}
-	cout << "Greatest Difference : " << x << "\n";
+	cout << "Greatest Difference : " << x << "\n\n";
 }
 
 void View_greatest_diff::get_model(Model *ptr_model)
@@ -21,10 +25,12 @@ void View_greatest_diff::get_model(Model *ptr_model)
 
 void View_greatest_diff::register_view(Controller_base* ptr_c)
 {
+	flag = 1;
 	ptr_c->add(this);
 };
 
 void View_greatest_diff::deregister_view(Controller_base* ptr_c)
 {
+	flag = 0;
 	ptr_c->remove(this);
 };

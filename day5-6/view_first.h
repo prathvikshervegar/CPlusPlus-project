@@ -11,7 +11,7 @@ class View_first : public View
 	virtual void deregister_view(Controller_base* ptr_c);
 	private:
 	Model *ptr_model_;
-
+	int flag = 0;
 };
 
 #endif

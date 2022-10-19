@@ -13,6 +13,7 @@ class View
 
 	virtual void update() = 0;
 	virtual void get_model(Model *ptr_model) = 0;
+	bool change;
 	
 };
 

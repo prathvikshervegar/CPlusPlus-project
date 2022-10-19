@@ -32,8 +32,8 @@ int main()
 			"4. Register Node count view\n5. Register Node sum view\n6. Register Greatest Key view\n"
 			"7. Register Greatest Difference view\n\n8. Deregister First node view\n"
 			"9. Deregister Last node view\n10. Deregister Node count view\n11. Deregister Node sum view\n"
-			"12. Deregister Greatest Key view\n13. Deregister Greatest Difference view\n\n"
-			"Press 0 to EXIT\n\n";
+			"12. Deregister Greatest Key view\n13. Deregister Greatest Difference view\n\n14. Display Views\n\n"
+			"Press 0 to EXIT\n";
 		cout << "\nChoose the option: ";
 		cin >> op;
 
@@ -72,6 +72,7 @@ int main()
 						}
 					}
 					break;
+
 			case 2: view_first.register_view(&c);
 					view_first.get_model(&m);
 					view_first.update();
@@ -119,8 +120,42 @@ int main()
 
 			case 13: view_greatest_diff.deregister_view(&c);
 					break;
+
+			case 14: char ch1;
+					while(true) {
+						cout << "\na. First node view\nb. Last node view\nc. Node count view\n"
+							"d. Node sum view\ne. Greatest key view\nf. Greatest difference view\n"
+							"g. Close\n";
+						cout << "Enter the choice: ";
+						cin >> ch1;
+						if(ch1 == 'a') {
+							view_first.update();
+						}
+						else if(ch1 == 'b') {
+							view_last.update();
+						}
+						else if(ch1 == 'c') {
+							view_count.update();
+						}
+						else if(ch1 == 'd') {
+							view_sum.update();
+						}
+						else if (ch1 == 'e') {
+							view_greatest_key.update();
+						}
+						else if (ch1 == 'f') {
+							view_greatest_diff.update();
+						}
+						else if (ch1 == 'g') {
+							break;
+						}
+						else {
+							cout << "Invalid choice\n\n";
+						}
+					}
+					break;
 		
-			default: cout << "Invalid choice\n";
+			default: cout << "Invalid option\n";
 					break;
 		}
 	}

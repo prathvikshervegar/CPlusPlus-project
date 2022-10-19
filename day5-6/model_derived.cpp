@@ -10,17 +10,17 @@ void Model1::set_controller(Controller_base* ptr_c)
 
 void Model1::insertfront(int data){
 	list_.insert_front(data);
-	ptr_c_->update();
+	//ptr_c_->update();
 }
 
 void Model1::insertend(int data){
 	list_.insert_end(data);
-	ptr_c_->update();
+	//ptr_c_->update();
 }
 
 void Model1::deletebyvalue(int val){
 	list_.deleteByValue(val);
-	ptr_c_->update();
+	//ptr_c_->update();
 }
 
 void Model1::display(){
